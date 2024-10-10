@@ -7,77 +7,94 @@
 
 /* Body styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff;
     color: #333;
     padding: 20px;
 }
 
 /* Header styling */
 header {
-    background: #333;
+    background: linear-gradient(45deg, #4CAF50, #1E88E5);
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo {
-    width: 200px;           
-    height: 200px;          
-    border-radius: 50%;     
-    overflow: hidden;       
-    border: 2px solid #333; 
-    object-fit: cover;      
-  }
-
-/* Navigation styling */
-nav ul {
-    list-style: none;
-    padding: 0;
+header .logo {
+    margin-right: 20px;
+    height: 60px; /* Adjust height for better size */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+header h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
 }
 
 /* Main content styling */
 main {
     background: #fff;
-    padding: 20px;
+    padding: 30px;
     margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Footer styling */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+/* Webcam container styling */
+#webcam-container {
     margin-top: 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+#label-container div {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #4CAF50;
 }
 
 /* Button styling */
 button {
-    background: #333;
+    background: linear-gradient(45deg, #FF5722, #FFC107);
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    margin: 10px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #555;
+    background: linear-gradient(45deg, #E64A19, #FF9800);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Webcam container styling */
+#webcam-container canvas {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adding a shadow for a more polished look */
+    overflow: hidden; /* Ensures the content inside respects the rounded corners */
+}
+
+
+/* Footer styling */
+footer {
+    background: #1E88E5;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
