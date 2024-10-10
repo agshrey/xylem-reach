@@ -13,13 +13,25 @@
         <h1>HydraScan</h1>
     </header>
     <main>
-        <div>Teachable Machine Image Model</div>
-        <button type="button" onclick="init()">Start</button>
-        <button type="button" onclick="stopWebcam()">Stop</button>
-        <div id="webcam-container"></div>
-        <div id="label-container"></div>
-        <div id="result" style="margin-top: 20px; font-size: 1.5em; color: #4CAF50;"> </div>
-
+        <div class="container">
+        
+            <div class="left-section">
+                <h2>Welcome to HydraScan</h2>
+                <p>Use our tool to scan and detect water damages.</p>    
+                <div>Scan your damage</div>
+                <div class="button-container">
+                    <button type="button" onclick="init()">Start</button>
+                    <button type="button" onclick="stopWebcam()">Stop</button>
+                </div>
+                <div id="webcam-container"></div>
+                <div id="label-container"></div>
+            </div>
+            <div class="right-section">
+                <div id="result" style="margin-top: 20px; font-size: 1.5em; color: #4CAF50;">
+                    No issues detected.
+                </div>
+            </div></div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
         
@@ -78,6 +90,8 @@
                             displayDataForClass2();
                         } else if (prediction[i].className === "Erosion/Corrosion") {
                             displayDataForClass3();
+                        } else {
+                            document.getElementById("result").innerHTML = "No issues detected.";
                         }
                     }
                 }
@@ -105,7 +119,7 @@
         </script>
     </main>
     <footer>
-        <p>&copy; 2023 Xylem Reach. All rights reserved.</p>
+        <p>&copy; 2024 Xylem Reach. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -28,7 +28,7 @@ header {
 
 header .logo {
     margin-right: 20px;
-    height: 60px; /* Adjust height for better size */
+    height: 60px;
     border-radius: 50%;
     border: 2px solid #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -39,11 +39,39 @@ header h1 {
     text-transform: uppercase;
 }
 
-/* Main content styling */
-main {
-    background: #fff;
-    padding: 30px;
-    margin-top: 20px;
+/* Flexbox layout for main content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: stretch;
+    height: 75vh; /* Adjust as needed */
+}
+
+/* Left section styling */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Right section styling */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -60,6 +88,12 @@ main {
     color: #4CAF50;
 }
 
+/* Button container to align buttons side by side */
+.button-container {
+    display: flex;
+    gap: 10px; /* Add some space between the buttons */
+}
+
 /* Button styling */
 button {
     background: linear-gradient(45deg, #FF5722, #FFC107);
@@ -69,7 +103,6 @@ button {
     cursor: pointer;
     border-radius: 25px;
     font-size: 1.1em;
-    margin: 10px;
     transition: background 0.3s ease;
 }
 
@@ -78,13 +111,13 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+
 /* Webcam container styling */
 #webcam-container canvas {
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adding a shadow for a more polished look */
-    overflow: hidden; /* Ensures the content inside respects the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
-
 
 /* Footer styling */
 footer {
