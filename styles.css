@@ -80,15 +80,15 @@ header h1 {
 
 /* Adjust bullet points and list styling inside the right section */
 .right-section ul {
-    list-style-position: inside; /* Ensures bullets are inside the text boundary */
-    padding-left: 20px; /* Indent the list items a little */
+    list-style-position: inside;
+    padding-left: 20px; 
 }
 
 .right-section li {
-    margin-left: 10px; /* Slight left margin for bullets */
-    padding-left: 10px; /* Ensure text alignment is neat */
-    font-size: 1em; /* Slightly increase the font size for readability */
-    color: #4CAF50; /* Set a clear text color */
+    margin-left: 10px;
+    padding-left: 10px; 
+    font-size: 1em;
+    color: #4CAF50; 
 }
 
 /* Webcam container styling */
@@ -105,7 +105,7 @@ header h1 {
 /* Button container to align buttons side by side */
 .button-container {
     display: flex;
-    gap: 10px; /* Add some space between the buttons */
+    gap: 10px;
 }
 
 /* Button styling */
@@ -138,7 +138,7 @@ footer {
     background: #1E88E5;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 15px;
     margin-top: 20px;
     position: fixed;
     width: 100%;
