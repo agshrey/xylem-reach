@@ -78,7 +78,50 @@
             webcam.stop();
         }
     }
-</script>      
+</script>
+    
+<script type="text/javascript">
+    async function predict() {
+    // Make a prediction
+    const prediction = await model.predict(webcam.canvas);
+
+    for (let i = 0; i < maxPredictions; i++) {
+        const classPrediction =
+        prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+        labelContainer.childNodes[i].innerHTML = classPrediction;
+
+        // Check if the predicted class is recognized and take action
+        if (prediction[i].probability > 0.7) {
+            if (prediction[i].className === "Class 1") {
+                displayDataForClass1();
+            } else if (prediction[i].className === "Class 2") {
+                displayDataForClass2();
+            } else if (prediction[i].className === "Class 3") {
+                displayDataForClass3();
+            }
+        }
+    }
+    }
+
+    // Example functions to display specific data based on the recognized class
+    function displayDataForClass1() {
+        document.getElementById("result").innerHTML = "Detected: Busted Pipe"
+        }
+
+        function displayDataForClass2() {
+        document.getElementById("result").innerHTML = "Detected: Clogged Pipe. Here’s how to fix it: ...";
+        }
+
+        function displayDataForClass3() {
+        document.getElementById("result").innerHTML = "Detected: Corrosion. Here’s how to fix it: ...";
+        }
+
+// <div id="webcam-container"></div>
+// <div id="label-container"></div>
+// <div id="result"></div>
+</script>
+
+   
     </main>
     <footer>
         <p>&copy; 2023 Xylem Reach. All rights reserved.</p>
