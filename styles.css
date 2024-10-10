@@ -65,6 +65,7 @@ header h1 {
 
 /* Right section styling */
 .right-section {
+    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,6 +76,19 @@ header h1 {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+/* Adjust bullet points and list styling inside the right section */
+.right-section ul {
+    list-style-position: inside; /* Ensures bullets are inside the text boundary */
+    padding-left: 20px; /* Indent the list items a little */
+}
+
+.right-section li {
+    margin-left: 10px; /* Slight left margin for bullets */
+    padding-left: 10px; /* Ensure text alignment is neat */
+    font-size: 1em; /* Slightly increase the font size for readability */
+    color: #4CAF50; /* Set a clear text color */
 }
 
 /* Webcam container styling */
