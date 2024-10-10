@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xylem Reach</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Xylem Reach</h1>
-    </header>
-    <main>
-        <div>Teachable Machine Image Model</div>
+<div>Teachable Machine Image Model</div>
 <button type="button" onclick="init()">Start</button>
-<button type="button" onclick="stopWebcam()">Stop</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
@@ -71,16 +57,3 @@
         }
     }
 </script>
-<script type="text/javascript">
-    function stopWebcam() {
-        if (webcam) {
-            webcam.stop();
-        }
-    }
-</script>      
-    </main>
-    <footer>
-        <p>&copy; 2023 Xylem Reach. All rights reserved.</p>
-    </footer>
-</body>
-</html>
